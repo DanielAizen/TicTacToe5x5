@@ -1,0 +1,32 @@
+﻿@page
+@model FP_DanielAizenband_Server.Pages.QueryRes.QueryResGameModel
+@{
+    ViewData["Title"] = "Quereis result page- Game";
+}
+<h1>Results</h1>
+
+<table class="table-bordered" style="border-collapse:separate; border-spacing:20px; border:1px">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].Winner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblGames[0].PlayerId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.TblGames)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Winner)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PlayerId)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

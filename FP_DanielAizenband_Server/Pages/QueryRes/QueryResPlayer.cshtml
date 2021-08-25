@@ -1,0 +1,38 @@
+﻿@page
+@model FP_DanielAizenband_Server.Pages.QueryRes.QueryResPlayerModel
+@{
+    ViewData["Title"] = "Quereis result page- Player";
+}
+<h1>Results</h1>
+
+<table class="table-bordered" style="border-collapse:separate; border-spacing:20px; border:1px">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TblPlayers[0].Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblPlayers[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TblPlayers[0].Email)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.TblPlayers)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Email)
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>

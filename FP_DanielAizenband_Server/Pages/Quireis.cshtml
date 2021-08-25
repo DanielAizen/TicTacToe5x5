@@ -1,0 +1,40 @@
+﻿@page
+@model FP_DanielAizenband_Server.Pages.Players.QuireisModel
+@{
+    ViewData["Title"] = "Quereis page";
+}
+
+<h1>Quireis</h1>
+<form action="" method="post">
+    <table style="border-collapse:initial; border-spacing:5px; border:1px">
+        <tr>
+            <td>
+                <button asp-page="./QueryRes/QueryResPlayer" >Show All Players</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button asp-page="QueryRes/QueryResGame" asp-route-query="2">Show All Games</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DropDownList("Selected_Pid", new SelectList(Model.TblPlayers.Select(p => p.Id + " - " + p.Username)), "Please choose")
+
+            </td>
+            <td>
+                <button asp-page="QueryRes/QueryResGame" asp-route-query="3" type="submit">Show Player Games</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button asp-page="QueryRes/QueryResNum" >Show all Players Num of Games</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button asp-page="QueryRes/Query5">Show all Players Grouped by Num of Games</button>
+            </td>
+        </tr>
+    </table>
+</form>
