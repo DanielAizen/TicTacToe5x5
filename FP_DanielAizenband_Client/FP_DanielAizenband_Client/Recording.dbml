@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RecordsDB" Class="RecordingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\RecordsDB.mdf;Integrated Security=True" SettingsObjectName="FP_DanielAizenband_Client.Properties.Settings" SettingsPropertyName="RecordsDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TblRecords" Member="TblRecords">
+    <Type Name="TblRecord">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NumOfTurns" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlayerMoves" Type="System.String" DbType="Char(80) NOT NULL" CanBeNull="false" />
+      <Column Name="PlayerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Winner" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
